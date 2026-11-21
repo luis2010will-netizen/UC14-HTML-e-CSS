@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Luis Henrique, estudante de Tecnologia da Informação e desenvolvedor em formação.">
+    <title>Luis Henrique | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#inicio" aria-label="Luis Henrique - início">LH<span>.</span></a>
+
+        <button class="botao-menu" id="botaoMenu" type="button"
+            aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="botao-tema" id="botaoTema" type="button"
+            aria-label="Ativar modo claro" title="Alternar tema">☼</button>
+    </header>
+
+    <main>
+        <section class="inicio secao" id="inicio">
+            <div class="inicio-texto">
+                <p class="saudacao" id="saudacao">Olá!</p>
+                <p class="texto-pequeno">MEU NOME É</p>
+                <h1>Luis Henrique<span>.</span></h1>
+                <h2>Estudante de TI <span>&</span> empreendedor</h2>
+                <p class="descricao">
+                    Gosto de tecnologia, vendas e de encontrar maneiras melhores
+                    de transformar ideias em resultados.
+                </p>
+                <a class="botao-principal" href="#projetos">Conheça meus projetos <span>↗</span></a>
+            </div>
+
+            <div class="inicio-foto">
+                <div class="foto-moldura">
+                    <img src="img/foto-perfil.jpg" alt="Foto de Luis Henrique em uma área verde, ao lado de uma caminhonete">
+                </div>
+                <span class="detalhe-foto" aria-hidden="true"></span>
+            </div>
+        </section>
+
+        <section class="secao sobre" id="sobre">
+            <p class="texto-pequeno">UM POUCO SOBRE MIM</p>
+            <h2>Sobre <span>mim</span></h2>
+            <p>
+                Meu nome é Luis Henrique, tenho 16 anos e moro em Natal, no Rio Grande
+                do Norte. Sou estudante do curso de Tecnologia da Informação no
+                SENAC e gosto muito de vendas, principalmente de carros, motos e
+                produtos utilitários domésticos.
+            </p>
+            <p>
+                Escolhi a área de tecnologia porque quero usar o que estou aprendendo
+                para melhorar meu trabalho com vendas, produzir mais e encontrar
+                novas oportunidades. Estou desenvolvendo meus conhecimentos em
+                programação e quero continuar aprendendo e criando projetos.
+            </p>
+        </section>
+
+        <section class="secao" id="habilidades">
+            <p class="texto-pequeno">O QUE ESTOU APRENDENDO</p>
+            <h2>Minhas <span>habilidades</span></h2>
+            <div class="grade-habilidades">
+                <article class="habilidade">
+                    <h3>HTML</h3>
+                    <p>Iniciante</p>
+                </article>
+                <article class="habilidade">
+                    <h3>CSS</h3>
+                    <p>Iniciante</p>
+                </article>
+                <article class="habilidade">
+                    <h3>JavaScript</h3>
+                    <p>Iniciante</p>
+                </article>
+                <article class="habilidade">
+                    <h3>JSON</h3>
+                    <p>Em aprendizado</p>
+                </article>
+                <article class="habilidade">
+                    <h3>Vendas</h3>
+                    <p>Habilidade pessoal</p>
+                </article>
+                <article class="habilidade">
+                    <h3>Condução de veículos</h3>
+                    <p>Habilidade pessoal</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao" id="projetos">
+            <p class="texto-pequeno">TRABALHOS E PRÁTICA</p>
+            <h2>Meus <span>projetos</span></h2>
+
+            <label class="rotulo-filtro" for="filtroProjetos">Filtrar projetos por tecnologia</label>
+            <select id="filtroProjetos" class="filtro">
+                <option value="todos">Todos os projetos</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+
+            <div class="grade-projetos" id="listaProjetos">
+                <!-- Os cards são criados pelo JavaScript. -->
+            </div>
+        </section>
+
+        <section class="secao contato" id="contato">
+            <p class="texto-pequeno">VAMOS CONVERSAR?</p>
+            <h2>Entre em <span>contato</span></h2>
+            <p class="descricao-contato">
+                Este formulário é demonstrativo e não envia seus dados para um servidor.
+                As informações digitadas são usadas apenas para testar a validação nesta página.
+            </p>
+
+            <form id="formularioContato" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name">
+                    <small class="erro" id="erroNome"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email">
+                    <small class="erro" id="erroEmail"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                    <small class="erro" id="erroMensagem"></small>
+                </div>
+
+                <div class="campo-consentimento">
+                    <input type="checkbox" id="consentimento" name="consentimento">
+                    <label for="consentimento">Entendo que os dados serão usados somente para demonstrar o formulário.</label>
+                </div>
+                <small class="erro" id="erroConsentimento"></small>
+
+                <button class="botao-principal" type="submit">Enviar mensagem</button>
+                <p class="mensagem-sucesso" id="mensagemSucesso" role="status" aria-live="polite"></p>
+            </form>
+
+            <a class="link-github" href="https://github.com/luis2010will-netizen" target="_blank" rel="noopener noreferrer">
+                Meu GitHub ↗
+            </a>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido por Luis Henrique · <span id="anoAtual"></span></p>
+        <a href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+
+    <button class="voltar-topo" id="voltarTopo" type="button" aria-label="Voltar ao topo">↑</button>
+</body>
+</html>
